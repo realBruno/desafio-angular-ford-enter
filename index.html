@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -23,8 +25,17 @@
             <div class="form-info">
                 <p class="boas-vindas">Boas-vindas</p>
                 <form action="submit" class="form">
-                    <input class="email-input" type="email" placeholder="Insira seu e-mail">
-                    <input class="password-input" type="password" placeholder="Insira sua senha">
+                    <div class="email-div">
+                        <i style="color: rgb(80, 190, 126);" class="bi bi-person-fill"></i>
+                        <input class="email-input" type="email" placeholder="Insira seu e-mail">
+                        <i style="color: rgb(80, 190, 126);" class="bi bi-info-circle"></i>
+                    </div>
+
+                    <div class="password-div">
+                        <i style="color: rgb(80, 190, 126);" class="bi bi-lock-fill"></i>
+                        <input class="password-input" type="password" placeholder="Insira sua senha">
+                        <i style="color: rgb(80, 190, 126);" class="bi bi-eye"></i>
+                    </div>
                     <div class="autologin-div">
                         <p class="autologin">Logar automaticamente</p>
                         <div class="autologin-slider">
@@ -33,7 +44,7 @@
                         </div>
                     </div>
                     <button class="login-button">Entrar</button>
-                </form>
+                </form>      
             </div>
         </section>
     </main>
