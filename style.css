@@ -41,8 +41,8 @@ main {
         align-items: center;
 
         .logo {
-            min-width: 10rem;
-            width: 20%;
+            min-width: 12rem;
+            width: 0%;
             max-width: 15rem;
             height: auto;
             margin-top: 1rem;

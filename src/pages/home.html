@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Sprint Angular</title>
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,23 +13,22 @@
         rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <h1 class="h1-sistema-dados">Sistema de dados <span class="ford">Ford</span></h1>
+    <nav class="nav">
+        <ul class="ul">
+           <img class="ford-logo-panel" src="../../public/img/ford-control-panel.svg" alt="Logo da ford"></li>
+            <div class="links">
+                <li class="li-header li-header-one"><a href="" class="link-1">Home</a></li>
+                <li class="li-header li-header-one"><a href="" class="link-2">Dashboard</a></li>
+            </div>
 
-    </header>
+        </ul>
+        
+    </nav>
     <main class="main">
-        <h1 class="h1-bem-vindo">Seja bem-vindo&lpar;a&rpar;!</h1>
-        <img class="car" src="../../public/img/ranger.png">
-        <!-- <dialog class="dialog" open>
-            <div class="dialog-head">
-                Sistema de dados FORD
-            </div>
-            <hr>
-            <div class="dialog-body">
-                Seja bem-vindo(a)!
-            </div>
-        </dialog> -->
+        <img class="main-image" src="../../public/img/ranger.png" alt="">
     </main>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/script.js"></script>
+    </body>
 </html>
