@@ -1,0 +1,139 @@
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    .car {
+        flex-grow: 1;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        min-width: min-content;
+
+        .image {
+            min-width: 15rem;
+            width: 80%;
+            height: auto;
+        }
+    }
+
+    .login {
+        background-color: rgb(245, 245, 245);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            min-width: 12rem;
+            width: 0%;
+            max-width: 15rem;
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        .form-info {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+
+            .boas-vindas {
+                font-size: 1.5rem;
+                color: rgb(80, 190, 126);
+                text-align: center;
+            }
+
+            .form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                .email-div,
+                .password-div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 0.3125rem;
+                }
+
+                .email-input,
+                .password-input {
+                    display: block;
+                }
+
+                .email-input,
+                .password-input,
+                .login-button {
+                    width: 40%;
+                    min-width: 15rem;
+                    padding: 0.4375rem;
+                    border: 1px solid gray;
+                    border-radius: 0.3125rem;
+                }
+
+                .autologin-div {
+                    display: flex;
+                    min-width: 15rem;
+                    width: 40%;
+                    align-items: center;
+
+                    .autologin {
+                        flex-grow: 1;
+                        text-align: center;
+                    }
+
+                    .autologin-slider {
+
+                        #slider {
+                            display: none;
+                        }
+
+                        .slider-button {
+                            display: inline-block;
+                            width: 40px;
+                            height: 20px;
+                            border-radius: 20px;
+                            cursor: pointer;
+                            background-color: rgb(210, 210, 210);
+                            position: relative;
+                        }
+
+                        .slider-button::before {
+                            position: absolute;
+                            content: '';
+                            background-color: #fff;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 100%;
+                            transition: 0.2s;
+                        }
+
+                        #slider:checked+.slider-button {
+                            background-color: rgb(80, 190, 126);
+                        }
+
+                        #slider:checked+.slider-button::before {
+                            transform: translateX(20px);
+                        }
+                    }
+                }
+
+                .login-button {
+                    background-color: rgb(173, 181, 189);
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
