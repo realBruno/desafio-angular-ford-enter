@@ -8,16 +8,16 @@
         <img class="logo" src="ford.png" alt="">
         <div class="form-info">
             <p class="boas-vindas">Boas-vindas</p>
-            <form action="submit" class="form">
+            <form (ngSubmit)="onLogin()" [formGroup]="loginForm" action="submit" class="form">
                 <div class="email-div">
                     <i style="color: rgb(80, 190, 126);" class="bi bi-person-fill"></i>
-                    <input class="email-input" type="email" placeholder="Insira seu e-mail">
+                    <input formControlName="nome" class="email-input" type="email" placeholder="Insira seu e-mail">
                     <i style="color: rgb(80, 190, 126);" class="bi bi-info-circle"></i>
                 </div>
 
                 <div class="password-div">
                     <i style="color: rgb(80, 190, 126);" class="bi bi-lock-fill"></i>
-                    <input class="password-input" type="password" placeholder="Insira sua senha">
+                    <input formControlName="senha" class="password-input" type="password" placeholder="Insira sua senha">
                     <i style="color: rgb(80, 190, 126);" class="bi bi-eye"></i>
                 </div>
                 <div class="autologin-div">
@@ -27,7 +27,7 @@
                         <label for="slider" class="slider-button"></label>
                     </div>
                 </div>
-                <button class="login-button">Entrar</button>
+                <button type="submit" class="login-button">Entrar</button>
             </form>
         </div>
     </section>
