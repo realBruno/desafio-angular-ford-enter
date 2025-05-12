@@ -1,10 +1,31 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LoginFormComponent } from './pages/login-form/login-form.component';
+import { loginGuard } from './guards/login.guard';
 
 export const routes: Routes = [
-  { path: '', component: LoginFormComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'dashboard', component: DashboardComponent}
-];
+
+  {
+    path: "",
+    pathMatch: "full",
+    loadComponent: () => {
+      return import("./pages/login-form/login-form.component").then(c => c.LoginFormComponent)
+    }
+  },
+
+  {
+    path: "home",
+    pathMatch: "full",
+    canActivate: [loginGuard],
+    loadComponent: () => {
+      return import("./pages/home/home.component").then(c => c.HomeComponent)
+    }
+  },
+  {
+    path: "dashboard",
+    pathMatch: "full",
+    canActivate: [loginGuard],
+    loadComponent: () => {
+      return import("./pages/dashboard/dashboard.component").then(c => c.DashboardComponent)
+    }
+  },
+
+]
