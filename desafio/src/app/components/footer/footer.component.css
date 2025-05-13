@@ -1,0 +1,14 @@
+/* *************** FOOTER *************** */
+
+.footer {
+    background-color: #1b357e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0.625rem;
+}
+
+.footer h1 {
+    font-size: 18px;
+}

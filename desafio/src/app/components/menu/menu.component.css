@@ -1,0 +1,49 @@
+.menu-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+/* *************** BUTTON *************** */
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.offcanvas-body button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.menu-icon {
+    width: 80%;
+}
+
+.offcanvas-body button a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.custom-offcanvas {
+    width: 50%;
+    max-width: 350px;
+}
+
+.logout-icon {
+    width: 20px;
+}
+
+/* *************** IMAGE *************** */
+
+.ford-logo {
+    min-width: 120px;
+    width: 7%;
+    height: auto;
+}

@@ -1,12 +1,20 @@
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Menu
-</button>
-
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Ford Enter</h5>
+<div class="menu-header">
+  <div class="menu-button">
+    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <img class="menu-icon" src="menu-icon.svg" alt="">
+    </button>
+    
+    <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Painel Ford</h5>
+      </div>
+      <div class="offcanvas-body">
+        <button><a href="/home">Home</a></button>
+        <button><a href="/dashboard">Dashboard</a></button>
+        <button><a href="/login"><img class="logout-icon" src="logout.png" alt=""> Log out</a></button>
+      </div>
+    </div>
   </div>
-  <div class="offcanvas-body">
-    <button>Dashboard</button>
-  </div>
+  
+  <img class="ford-logo" src="ford-logo-header.svg" alt="">
 </div>
