@@ -1,18 +1,24 @@
 <app-menu></app-menu>
 <h1 class="text-center fw-bold">DASHBOARD FORD</h1>
-<div class="d-flex flex-grow-1 p-3 gap-3 flex-wrap justify-content-center align-items-center">
+<section class="all-cards d-flex flex-grow-1 gap-3 flex-wrap justify-content-center align-items-center">
 
-    <div class="shadow border border-black p-3">
+    <div class="card     p-3">
         <h2>Veículos</h2>
-        <select>
-            <option value="">Territory</option>
-            <option value="">Mustang</option>
-            <option value="">Bronco</option>
-            <option value="">Ranger</option>
+        <select (change)="onChangeSelect()">
+            @for (v of veiculos; track v.id; ) {
+                <option value="{{v.id}}">{{v.vehicle}}</option>
+            }
         </select>
     </div>
     
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-</div>
+    <app-card titulo="Total de Vendas" [valor]="veiculoSelecionado.volumetotal"></app-card>
+    <app-card titulo="Conectados" [valor]="veiculoSelecionado.connected"></app-card>
+    <app-card titulo="Update Software" [valor]="veiculoSelecionado.softwareUpdates"></app-card>
+</section>
+
+<section class="d-flex flex-grow-1 gap-3 flex-wrap justify-content-center align-items-center">
+    <div class="flex-grow-1 car-image-div d-flex justify-content-center">
+        <img class="car-image" src="{{veiculoSelecionado.img}}" alt="">
+    </div>
+    <app-table></app-table>
+</section>

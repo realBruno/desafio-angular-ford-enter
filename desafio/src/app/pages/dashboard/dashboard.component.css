@@ -1,0 +1,45 @@
+.card {
+    background-color: rgb(125, 90, 255);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    flex: 1 1 320px;
+    height: 130px;
+    text-align: center;
+    min-width: min-content;
+}
+
+.card select {
+    max-width: min-content;
+    align-self: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+app-card {
+    flex: 1 1 320px;   
+    text-align: center;
+}
+
+.all-cards {
+    z-index: 1; 
+    margin: 0 5%;
+}
+
+/* IMAGE */
+
+.car-image {
+    width: 70%;
+    height: auto;
+}
+
+.car-image-div {
+    display: flex;
+}
+
+/* TABLE */
+
+app-table {
+    flex-grow: 1;
+}
