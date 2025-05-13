@@ -1,9 +1,10 @@
-<table>
+<div class="table-container">
+    <table>
     <thead center class="table-head">
         <tr>
             <th>VIN</th>
             <th>ODÔMETRO</th>
-            <th>NÍVEL DO COMBUSTÍVEL</th>
+            <th>COMBUSTÍVEL</th>
             <th>STATUS</th>
             <th>LAT</th>
             <th>LONG</th>
@@ -12,7 +13,7 @@
     <tbody class="table-body">
         <tr>
             <td>
-                <input type="text" placeholder="{{vin}}" value="{{vin}}">
+                <input class="input" type="text" readonly placeholder="{{vin}}" value="{{vin}}">
             </td>
             <td>{{odometro}}km</td>
             <td>{{nivelCombustivel}}%</td>
@@ -22,3 +23,4 @@
         </tr>
     </tbody>
 </table>
+</div>
