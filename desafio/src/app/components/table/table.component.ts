@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './table.component.css'
 })
 export class TableComponent {
-
+  @Input() vin: string = ""
+  @Input() odometro: number = 0
+  @Input() nivelCombustivel: number = 0
+  @Input() status: string = ""
+  @Input() lat: number = 0
+  @Input() long: number = 0
 }

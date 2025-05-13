@@ -12,13 +12,13 @@
     <tbody class="table-body">
         <tr>
             <td>
-                <input type="text">
+                <input type="text" placeholder="{{vin}}" value="{{vin}}">
             </td>
-            <td>80000km</td>
-            <td>90%</td>
-            <td>ON</td>
-            <td>-32.2831</td>
-            <td>14.1625</td>
+            <td>{{odometro}}km</td>
+            <td>{{nivelCombustivel}}%</td>
+            <td>{{status.toUpperCase()}}</td>
+            <td>{{lat}}</td>
+            <td>{{long}}</td>
         </tr>
     </tbody>
 </table>

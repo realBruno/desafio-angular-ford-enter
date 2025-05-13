@@ -3,7 +3,7 @@ import { MenuComponent } from '../../components/menu/menu.component';
 import { CardComponent } from '../../components/card/card.component';
 import { TableComponent } from '../../components/table/table.component';
 import { DashboardService } from '../../services/dashboard.service';
-import { Veiculo } from '../../models/car';
+import { Veiculo, VinInfos } from '../../models/car';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,6 +26,15 @@ export class DashboardComponent implements OnInit {
     vin: '',
 
   }
+  
+  vinInfos: VinInfos = {
+    id: -1,
+    lat: 0,
+    long: 0,
+    nivelCombustivel: 0,
+    odometro: 0,
+    status: ""
+  }
 
   ngOnInit()  {
     this.dashboardService.getVeiculos().subscribe({
@@ -33,11 +42,35 @@ export class DashboardComponent implements OnInit {
       next: (veiculos) => {
         this.veiculos = Object.values(veiculos) as Veiculo[]
         this.veiculoSelecionado = veiculos[0]
+
+        this.dashboardService.getVinInfos(this.veiculoSelecionado.vin).subscribe({
+          error: () => {},
+          next: (vinInfos) => {
+             this.vinInfos = vinInfos
+          }
+        })
       },
     })
   }
 
-  onChangeSelect() {
+  onChangeSelect(event: Event) {
+    const id = Number((event.target as HTMLSelectElement).value)
+    const veiculo = this.veiculos.find((veiculo) => veiculo.id === id)
+
+    if (veiculo) {
+      this.veiculoSelecionado = veiculo
+    }
+
+    this.dashboardService.getVinInfos(this.veiculoSelecionado.vin).subscribe({
+          error: () => {},
+          next: (vinInfos) => {
+             this.vinInfos = vinInfos
+          }
+        })
+
+  }
+
+  onChangeVin() {
 
   }
 }

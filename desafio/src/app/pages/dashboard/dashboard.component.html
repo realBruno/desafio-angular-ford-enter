@@ -4,7 +4,7 @@
 
     <div class="card     p-3">
         <h2>Veículos</h2>
-        <select (change)="onChangeSelect()">
+        <select (change)="onChangeSelect($event)">
             @for (v of veiculos; track v.id; ) {
                 <option value="{{v.id}}">{{v.vehicle}}</option>
             }
@@ -20,5 +20,12 @@
     <div class="flex-grow-1 car-image-div d-flex justify-content-center">
         <img class="car-image" src="{{veiculoSelecionado.img}}" alt="">
     </div>
-    <app-table></app-table>
+    <app-table [vin]="veiculoSelecionado.vin"
+        [lat]="vinInfos.lat"
+        [long]="vinInfos.long"
+        [nivelCombustivel]="vinInfos.nivelCombustivel"
+        [odometro]="vinInfos.odometro"
+        [status]="vinInfos.status"
+
+    ></app-table>
 </section>
