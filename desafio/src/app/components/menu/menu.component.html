@@ -9,9 +9,9 @@
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Painel Ford</h5>
       </div>
       <div class="offcanvas-body">
-        <button><a href="/home">Home</a></button>
-        <button><a href="/dashboard">Dashboard</a></button>
-        <button><a href="/login"><img class="logout-icon" src="logout.png" alt=""> Log out</a></button>
+        <button (click)="goToHome()">Home</button>
+        <button (click)="goToDashboard()">Dashboard</button>
+        <button (click)="goToLogin()"><img class="logout-icon" src="logout.png" alt=""> Log out</button>
       </div>
     </div>
   </div>

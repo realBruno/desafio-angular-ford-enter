@@ -19,16 +19,11 @@
     padding: 10px;
     border-radius: 10px;
     display: flex;
+    font-weight: 600;
 }
 
 .menu-icon {
     width: 80%;
-}
-
-.offcanvas-body button a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
 }
 
 .custom-offcanvas {
