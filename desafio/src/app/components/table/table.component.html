@@ -1,26 +1,24 @@
 <div class="table-container">
-    <table>
-    <thead center class="table-head">
-        <tr>
-            <th>VIN</th>
-            <th>ODÔMETRO</th>
-            <th>COMBUSTÍVEL</th>
-            <th>STATUS</th>
-            <th>LAT</th>
-            <th>LONG</th>
-        </tr>
+  <table class="responsive-table">
+    <thead class="table-head">
+      <tr>
+        <th>VIN</th>
+        <th>ODÔMETRO</th>
+        <th>COMBUSTÍVEL</th>
+        <th>STATUS</th>
+        <th>LAT</th>
+        <th>LONG</th>
+      </tr>
     </thead>
     <tbody class="table-body">
-        <tr>
-            <td>
-                <input class="input" type="text" readonly placeholder="{{vin}}" value="{{vin}}">
-            </td>
-            <td>{{odometro}}km</td>
-            <td>{{nivelCombustivel}}%</td>
-            <td>{{status.toUpperCase()}}</td>
-            <td>{{lat}}</td>
-            <td>{{long}}</td>
-        </tr>
+      <tr>
+        <td><input class="input" type="text" readonly placeholder="{{vin}}" value="{{vin}}"></td>
+        <td>{{odometro}}km</td>
+        <td>{{nivelCombustivel}}%</td>
+        <td>{{status.toUpperCase()}}</td>
+        <td>{{lat}}</td>
+        <td>{{long}}</td>
+      </tr>
     </tbody>
-</table>
+  </table>
 </div>
