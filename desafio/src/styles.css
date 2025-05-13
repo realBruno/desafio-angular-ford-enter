@@ -28,3 +28,10 @@ app-boas-vindas {
     display: flex;
     flex-grow: 1;
 }
+
+app-dashboard {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}

@@ -18,28 +18,37 @@
 }
 
 app-card {
-    flex: 1 1 320px;   
+    flex: 1 1 320px;
     text-align: center;
 }
 
 .all-cards {
-    z-index: 1; 
     margin: 0 5%;
+}
+/* title */
+
+.title {
+    color: rgb(70, 120, 235);
 }
 
 /* IMAGE */
 
 .car-image {
-    width: 70%;
+    min-width: 320px;
+    width: 50%;
     height: auto;
 }
 
 .car-image-div {
+    flex-grow: 1;
     display: flex;
 }
 
-/* TABLE */
+.car-section {
+    flex-grow: 1;
+}
+
+/* table */
 
 app-table {
-    flex-grow: 1;
 }
