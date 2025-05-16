@@ -1,0 +1,32 @@
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  border-collapse: collapse;
+  flex-grow: 1;
+  width: 100%;
+  min-width: 1200px;
+  table-layout: fixed;
+  text-align: center;
+}
+
+thead {
+  background-color: hsla(214, 100%, 50%, 0.6);
+  color: white;
+}
+
+th,
+td {
+  width: 16.66%;
+  white-space: nowrap;
+}
+
+.input {
+  border: none;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}

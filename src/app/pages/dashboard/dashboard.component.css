@@ -1,0 +1,62 @@
+.card {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    flex: 1 1 320px;
+    height: 130px;
+    text-align: center;
+    min-width: min-content;
+    color: rgb(0, 160, 255);
+    /* color: rgb(90, 135, 160); */
+}
+
+.card select {
+    max-width: min-content;
+    align-self: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+app-card {
+    flex: 1 1 320px;
+    text-align: center;
+}
+
+.all-cards {
+    margin: 0 15%;
+}
+
+.selector {
+    border: none;
+    box-shadow: 0.3px 0.3px 10px rgb(199, 199, 199);
+    color: rgb(0, 160, 255);
+}
+
+.selector:focus {
+    border: none;
+}
+
+/* title */
+
+.title {
+    color: rgb(0, 160, 255);
+}
+
+/* IMAGE */
+
+.car-image {
+    min-width: 320px;
+    width: 50%;
+    height: auto;
+}
+
+.car-image-div {
+    flex-grow: 1;
+    display: flex;
+}
+
+.car-section {
+    flex-grow: 1;
+}
