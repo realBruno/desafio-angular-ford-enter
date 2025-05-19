@@ -19,7 +19,7 @@ export class LoginFormComponent {
   })
 
   onLogin() {
-    const {nome, senha} = this.loginForm.value
+    const { nome, senha } = this.loginForm.value
     if (!this.loginForm.valid || !nome || !senha) {
       alert("Preencha todos os campos")
       return
@@ -27,16 +27,33 @@ export class LoginFormComponent {
 
     this.loginService.login(nome, senha).subscribe({
       error: (err) => {
-          if (err.status === 401) {
-            alert("Usuário ou senha incorretos")
-            return
-          }
-            alert("Erro interno. Tente novamente mais tarde.")
+        if (err.status === 401) {
+          alert("Usuário ou senha incorretos")
+          return
+        }
+        alert("Erro interno. Tente novamente mais tarde.")
       },
 
       next: () => {
         this.router.navigate(["/home"])
       }
     })
+
   }
+
+  loginButtonColor = 'rgb(173, 181, 189)';
+
+  onInputChange() {
+    const nome = (this.loginForm.get('nome')?.value || '').trim();
+    const senha = (this.loginForm.get('senha')?.value || '').trim();
+
+
+    if (nome && senha) {
+      this.loginButtonColor = 'rgb(0, 160, 255)';
+    } else {
+      this.loginButtonColor = 'rgb(173, 181, 189)';
+    }
+  }
+
+
 }
