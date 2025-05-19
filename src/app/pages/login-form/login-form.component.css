@@ -65,6 +65,11 @@
                     gap: 0.3125rem;
                 }
 
+                .password-div i.bi-eye,
+                .password-div i.bi-eye-slash {
+                    cursor: pointer;
+                }
+
                 .email-input,
                 .password-input {
                     display: block;

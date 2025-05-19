@@ -38,7 +38,6 @@ export class LoginFormComponent {
         this.router.navigate(["/home"])
       }
     })
-
   }
 
   loginButtonColor = 'rgb(173, 181, 189)';
@@ -55,5 +54,13 @@ export class LoginFormComponent {
     }
   }
 
+
+  passwordVisible = false;
+
+togglePasswordVisibility() {
+  this.passwordVisible = !this.passwordVisible;
+}
+
+  
 
 }

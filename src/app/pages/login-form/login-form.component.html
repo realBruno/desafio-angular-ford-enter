@@ -15,8 +15,12 @@
 
                 <div class="password-div">
                     <i style="color: rgb(80, 190, 126);" class="bi bi-lock-fill"></i>
-                    <input (input)="onInputChange()" formControlName="senha" class="password-input input" type="password" placeholder="Insira sua senha">
-                    <i style="color: rgb(80, 190, 126);" class="bi bi-eye"></i>
+                    <input [type]="passwordVisible ? 'text' : 'password'" (input)="onInputChange()" formControlName="senha" class="password-input input" type="password" placeholder="Insira sua senha">
+                    <i
+                    [class.bi-eye]="!passwordVisible"
+                    [class.bi-eye-slash]="passwordVisible"
+                    style="color: rgb(80, 190, 126); cursor: pointer;"
+                     (click)="togglePasswordVisibility()"  style="color: rgb(80, 190, 126);" class="bi bi-eye"></i>
                 </div>
                 <div class="autologin-div">
                     <p class="autologin">Logar automaticamente</p>
