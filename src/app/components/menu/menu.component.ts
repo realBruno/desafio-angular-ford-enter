@@ -19,5 +19,8 @@ export class MenuComponent {
 
   goToLogin () {
     this.router.navigate([""])
+    localStorage.removeItem('autologin');
+    localStorage.removeItem('usuario');
+    localStorage.removeItem('senha');
   }
 }

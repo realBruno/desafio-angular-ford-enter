@@ -4,3 +4,8 @@
     flex-grow: 1;
 }
 
+.home-main h1 {
+    font-weight: 700;
+    color: rgb(0, 160, 255);
+    text-align: center;
+}

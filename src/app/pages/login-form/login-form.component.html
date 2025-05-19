@@ -10,7 +10,7 @@
                 <div class="email-div">
                     <i style="color: rgb(80, 190, 126);" class="bi bi-person-fill"></i>
                     <input (input)="onInputChange()" formControlName="nome" class="email-input input" type="email" placeholder="Insira seu e-mail">
-                    <i style="color: rgb(80, 190, 126);" class="bi bi-info-circle"></i>
+                    <i title="Digite um e-mail válido. Ex.: seu@email.com" style="color: rgb(80, 190, 126);" class="bi bi-info-circle"></i>
                 </div>
 
                 <div class="password-div">
@@ -25,7 +25,7 @@
                 <div class="autologin-div">
                     <p class="autologin">Logar automaticamente</p>
                     <div class="autologin-slider">
-                        <input type="checkbox" id="slider">
+                        <input type="checkbox" id="slider" formControlName="autologin">
                         <label for="slider" class="slider-button"></label>
                     </div>
                 </div>
